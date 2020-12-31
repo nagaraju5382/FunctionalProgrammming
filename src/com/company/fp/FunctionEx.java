@@ -9,10 +9,14 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class FunctionEx {
-    Function<Integer,Integer> multiplyThreeTimes = (x)->  x*3;
+    // with return statement
+    Function<Integer,Integer> multiplyThreeTimes = (x)->{ return x*3; };
+    // without return statement
+    // Function<Integer,Integer> multiplyThreeTimes = (x)-> x*3;
 
-    BiFunction<Integer,Integer,Integer> multiplyTwoNumber = (x, y) ->  x*y ;
-
+    BiFunction<Integer,Integer,Integer> multiplyTwoNumber = (x, y) -> {return x*y ;};
+    // without return statement
+    // BiFunction<Integer,Integer,Integer> multiplyTwoNumber = (x, y) -> x*y ;
     BinaryOperator<Integer> ss = (xe,yw)-> xe + yw   ;
 
     UnaryOperator<Integer> uo = (uo)->uo+4;
